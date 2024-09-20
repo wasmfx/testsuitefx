@@ -30,8 +30,12 @@ git rev-parse --verify "$SPEC_REPO_COMMIT" ||
 
 popd
 
-cp spec/validation.wast $spec_repo_dir/test/core/wasmfx_validation.wast
-cp spec/validation_gc.wast $spec_repo_dir/test/core/wasmfx_validation_gc.wast
+if [[ ! -d "$spec_repo_dir/test/core/stack-switching" ]]; then
+    mkdir "$spec_repo_dir/test/core/stack-switching"
+fi
+
+cp spec/validation.wast $spec_repo_dir/test/core/stack-switching/validation.wast
+cp spec/validation_gc.wast $spec_repo_dir/test/core/stack-switching/validation_gc.wast
 
 
 # Let's make sure that our tests actually work
