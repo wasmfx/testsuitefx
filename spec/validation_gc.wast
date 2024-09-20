@@ -45,6 +45,8 @@
 
   )
   "sub type 4 does not match super type 2"
+  ;; NOTE(dhil): in wasm-tools the expected error message is slightly less precise:
+  ;; "sub type must match super type"
 )
 
 (assert_invalid
