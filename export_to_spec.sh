@@ -34,8 +34,8 @@ if [[ ! -d "$spec_repo_dir/test/core/stack-switching" ]]; then
     mkdir "$spec_repo_dir/test/core/stack-switching"
 fi
 
-cp spec/validation.wast $spec_repo_dir/test/core/stack-switching/validation.wast
-cp spec/validation_gc.wast $spec_repo_dir/test/core/stack-switching/validation_gc.wast
+cp spec/stack-switching/validation.wast $spec_repo_dir/test/core/stack-switching/validation.wast
+cp spec/stack-switching/validation_gc.wast $spec_repo_dir/test/core/stack-switching/validation_gc.wast
 
 
 # Let's make sure that our tests actually work
